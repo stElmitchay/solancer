@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import { PiDotsSixVerticalLight, PiCircleFill, PiFacebookLogoFill } from "react-icons/pi";
-import SolanaRockstarCard from "./components/home/solana_rockstar_card";
-import FeaturedProfileCard from "./components/home/featured_profile_card";
-import WhyChooseUsCard from "./components/home/why_choose_us_card";
-import FeaturedJobCard from "./components/home/featured_jobs_card";
-import PrimaryButton from "./components/button";
-import NewsCard from "./components/home/news_card";
-import Logo from "./components/logo";
+import { PiDotsSixVerticalLight, PiCircleFill } from "react-icons/pi";
+import NavBar from "./components/core/navbar";
+import FeaturedProfileSection from "./components/home/sections/featured_profile_section";
+import WhyChooseUsSection from "./components/home/sections/why_choose_us_section";
+import FeaturedJobsSection from "./components/home/sections/featured_jobs_section";
+import MetricsSection from "./components/home/sections/metrics_section";
+import LatestNewsSection from "./components/home/sections/latest_news_section";
+import Footer from "./components/core/footer";
+import SolanaRockStarSection from "./components/home/sections/solana_rockstar_section";
 
 const cards = [
   {
@@ -27,64 +28,7 @@ const cards = [
 
 ]
 
-const featured_profile_cards = [
-  {
-    id: "1",
-    userProfession: "UI/UX Designer",
-    userPrice: "84"
-  },
-  {
-    id: "2",
-    userProfession: "UI/UX Designer",
-    userPrice: "84"
-  },
-  {
-    id: "3",
-    userProfession: "UI/UX Designer",
-    userPrice: "84"
-  },
-  {
-    id: "4",
-    userProfession: "UI/UX Designer",
-    userPrice: "84"
-  }
-]
 
-
-const featured_jobs_card = [
-  {
-    id: "1",
-    profession: "UI/UX Designer",
-    company: "Paradoxx",
-    minSalary: '35,000',
-    maxSalary: '80,000',
-    location: "San Francisco, CA"
-  },
-  {
-    id: "2",
-    profession: "UI/UX Designer",
-    company: "Paradoxx",
-    minSalary: '35,000',
-    maxSalary: '80,000',
-    location: "San Francisco, CA"
-  },
-  {
-    id: "3",
-    profession: "UI/UX Designer",
-    company: "Paradoxx",
-    minSalary: '35,000',
-    maxSalary: '80,000',
-    location: "San Francisco, CA"
-  },
-  {
-    id: "4",
-    profession: "UI/UX Designer",
-    company: "Paradoxx",
-    minSalary: '35,000',
-    maxSalary: '80,000',
-    location: "San Francisco, CA"
-  }
-]
 
 
 export default function Home() {
@@ -92,41 +36,7 @@ export default function Home() {
   return (
 
     <main className="min-h-screen bg-white">
-      <nav className="flex flex-row max-w-full pt-6">
-        <div className="w-full">
-          <ul className="flex justify-around text-green-950  items-center">
-            <li>
-              <Logo />
-            </li>
-            <li>
-              Home
-            </li>
-            <li>
-              Build a Product
-            </li>
-            <li>
-              Learn
-            </li>
-            <li>
-              Become a hunter
-            </li>
-            <li>
-              <div className="relative">
-                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                  </svg>
-                </div>
-                <input type="search" id="default-search" className="block w-full h-8 ps-10 text-sm border border-slate-300 rounded-full" placeholder="Search Here" required />
-              </div>
-            </li>
-            <li>
-              <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+      
       <div className="h-screen flex flex-row justify-around text-green-950">
         <div className="flex flex-col mt-20">
           <div className="max-w-lg text-5xl font-bold">
@@ -146,227 +56,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center mb-12">
-        <div className="flex flex-col">
-          <div className="text-3xl font-semibold text-green-950 text-center">Everything You Need to Become a Solana Rockstar</div>
-          <div className="flex flex-row space-x-4"> {/* Flex container for cards with padding */}
-            {cards.map((card) => (
-              <div key={card.id} className="p-4 mt-16"> {/* Add padding to each card */}
-                <SolanaRockstarCard header={card.header} subHeader={card.subHeader} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <section className="h-fit bg-green-950 p-12">
-        <div className="flex justify-between">
-          <div className="text-xl font-medium">Featured profile this week</div>
-          <div className="text-sm">View more</div>
-        </div>
-        <div className="flex flex-row space-x-4">
-          {
-            featured_profile_cards.map((card) => (
-              <div key={card.id} className="p-4 mt-16 w-full">
-                <FeaturedProfileCard cardId={card.id} userProfession={card.userProfession} userPrice={card.userPrice} userName={"David"} userImage={"https://img.freepik.com/free-photo/casual-young-african-man-smiling-isolated-white_93675-128895.jpg?w=740&t=st=1711255753~exp=1711256353~hmac=517869ef737dd30f0d791777a7b87cb64295f3ff7e63f451481dfb38b0aeb5a2"} />
-              </div>
-            ))
-          }
-        </div>
-      </section>
-
-      <section className="h-screen text-green-950  bg-white">
-
-        <div className="flex flex-col place-items-center">
-          <div className="flex flex-col max-w-md text-center my-12">
-            <div className="text-3xl font-semibold">Why Choose Us</div>
-            <div className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
-          </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div>
-              <WhyChooseUsCard />
-            </div>
-            <div>
-              <WhyChooseUsCard />
-            </div>
-            <div>
-              <WhyChooseUsCard />
-            </div>
-            <div>
-              <WhyChooseUsCard />
-            </div>
-            <div>
-              <WhyChooseUsCard />
-            </div>
-            <div>
-              <WhyChooseUsCard />
-            </div>
-          </div>
-
-
-        </div>
-
-      </section>
-
-      <section className="h-screen text-green-950  bg-white">
-        <div className="flex flex-col place-items-center">
-          <div className="flex flex-col max-w-md text-center my-12">
-            <div className="text-3xl font-semibold">Featured Jobs</div>
-            <div className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
-          </div>
-
-
-          <div className="flex flex-row ps-8 pr-8">
-            {
-              featured_jobs_card.map((job) => (
-                <div key={job.id} className="px-4">
-                  <FeaturedJobCard key={job.id} profession={job.profession} company={job.company} minSalary={job.minSalary} maxSalary={job.maxSalary} location={job.location} />
-                </div>
-              ))
-            }
-          </div>
-
-          <div className="mt-12">
-            <PrimaryButton color={'green-950'} text="View more" />
-          </div>
-        </div>
-      </section>
-
-      <section className="h-fit bg-green-950">
-        <div className="flex p-12 place-self-center">
-          <div className="p-12 w-full border border-slate-500 rounded-md">
-            <div className="flex flex-row justify-evenly p-12">
-              <div className="flex flex-col">
-                <h1 className="text-4xl font-bold">36,789+</h1>
-                <h5 className="text-sm mt-6">Talented Freelancer</h5>
-              </div>
-              <div className="flex flex-col">
-                <h1 className="text-4xl font-bold">36,789+</h1>
-                <h5 className="text-sm mt-6">Talented Freelancer</h5>
-              </div>
-              <div className="flex flex-col">
-                <h1 className="text-4xl font-bold">36,789+</h1>
-                <h5 className="text-sm mt-6">Talented Freelancer</h5>
-              </div>
-              <div className="flex flex-col">
-                <h1 className="text-4xl font-bold">36,789+</h1>
-                <h5 className="text-sm mt-6">Talented Freelancer</h5>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      <section className="h-fit bg-white">
-        <div className="p-12">
-          <div className="flex flex-col">
-            <h1 className="text-3xl text-slate-700 font-semibold">Latest News</h1>
-            <h5 className="text-sm text-slate-400 mt-6">These are all the shakings happening in the solana job market </h5>
-          </div>
-
-          <div className="flex p-12">
-            <div className="px-4">
-              <NewsCard category="People" width="max-w-xl" />
-            </div>
-            <div className="px-4 w-full">
-              <NewsCard category="Industry" width="" />
-            </div>
-          </div>
-
-        </div>
-
-
-      </section>
-
-
-      <section className="h-fit bg-[#1F2131]">
-        <div className="p-12">
-          <div className="flex flex-row items-center justify-between">
-            <h1 className="max-w-md text-3xl text-[#72CAC4] font-semibold leading-relaxed">Don’t miss our weekly updates about freelancer career</h1>
-            <input type="search" id="default-search" className="block h-8 ps-10 text-sm border border-slate-300 rounded-full" placeholder="Search Here" required />
-          </div>
-
-          <div className="flex flex-row items-center mt-32">
-
-            <div className="flex flex-col max-w-md space-y-10">
-              <Logo />
-              <h5 className="text-sm">Solancer is a web3 based freelancing website where freelancers and employers can meet and work together</h5>
-              <div className="flex gap-4">
-                <PiFacebookLogoFill />
-                <PiFacebookLogoFill />
-                <PiFacebookLogoFill />
-                <PiFacebookLogoFill />
-                <PiFacebookLogoFill />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-4 gap-4 px-32">
-              <div className="flex flex-col">
-                <h1 className="font-semibold">Solancer</h1>
-                <ul>
-                  <li>Why Solancer</li>
-                  <li>Enterprise</li>
-                  <li>Testimonials</li>
-                  <li>Security</li>
-                  <li>Pricing</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col">
-                <h1 className="font-semibold">Resources</h1>
-                <ul>
-                  <li>Download</li>
-                  <li>Help Center</li>
-                  <li>Events</li>
-                  <li>Guides</li>
-                  <li>Partner</li>
-                  <li>Directories</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col">
-                <h1 className="font-semibold">Company</h1>
-                <ul>
-                  <li>About us</li>
-                  <li>Contact us</li>
-                  <li>Products</li>
-                  <li>Faq</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col">
-                <h1 className="font-semibold">Get in Touch with Us</h1>
-                <ul>
-                  <li>About us</li>
-                  <li>Contact us</li>
-                  <li>Products</li>
-                  <li>Faq</li>
-                </ul>
-              </div>
-
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-        <hr />
-        <div className="px-12 py-6">
-          <h5><span>Solancer Offical Website{' '}-{' '}&copy;{' '} 2024 All Rights Reserved</span></h5>
-        </div>
-
-      </section>
-
-
-
-
-
-
+      <SolanaRockStarSection />
+      <FeaturedProfileSection />
+      <WhyChooseUsSection />
+      <FeaturedJobsSection />
+      <MetricsSection />
+      <LatestNewsSection />
+      <Footer />
     </main>
   )
 }
