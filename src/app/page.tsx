@@ -4,6 +4,7 @@ import SolanaRockstarCard from "./components/home/solana_rockstar_card";
 import FeaturedProfileCard from "./components/home/featured_profile_card";
 import WhyChooseUsCard from "./components/home/why_choose_us_card";
 import FeaturedJobCard from "./components/home/featured_jobs_card";
+import PrimaryButton from "./components/button";
 
 const cards = [
   {
@@ -44,6 +45,42 @@ const featured_profile_cards = [
     id: "4",
     userProfession: "UI/UX Designer",
     userPrice: "84"
+  }
+]
+
+
+const featured_jobs_card = [
+  {
+    id: "1",
+    profession: "UI/UX Designer",
+    company: "Paradoxx",
+    minSalary: '35,000',
+    maxSalary: '80,000',
+    location: "San Francisco, CA"
+  },
+  {
+    id: "2",
+    profession: "UI/UX Designer",
+    company: "Paradoxx",
+    minSalary: '35,000',
+    maxSalary: '80,000',
+    location: "San Francisco, CA"
+  },
+  {
+    id: "3",
+    profession: "UI/UX Designer",
+    company: "Paradoxx",
+    minSalary: '35,000',
+    maxSalary: '80,000',
+    location: "San Francisco, CA"
+  },
+  {
+    id: "4",
+    profession: "UI/UX Designer",
+    company: "Paradoxx",
+    minSalary: '35,000',
+    maxSalary: '80,000',
+    location: "San Francisco, CA"
   }
 ]
 
@@ -123,7 +160,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="h-1/2 bg-green-950 p-12">
+      <section className="h-fit bg-green-950 p-12">
         <div className="flex justify-between">
           <div className="text-xl font-medium">Featured profile this week</div>
           <div className="text-sm">View more</div>
@@ -178,16 +215,52 @@ export default function Home() {
             <div className="text-3xl font-semibold">Featured Jobs</div>
             <div className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
 
-            <div>
-              <FeaturedJobCard />
-            </div>
+
+          <div className="flex flex-row ps-8 pr-8">
+            {
+              featured_jobs_card.map((job) => (
+                <div key={job.id} className="px-4">
+                  <FeaturedJobCard key={job.id} profession={job.profession} company={job.company} minSalary={job.minSalary} maxSalary={job.maxSalary} location={job.location} />
+                </div>
+              ))
+            }
           </div>
 
+          <div className="mt-12">
+            <PrimaryButton color={'green-950'} text="View more" />
+          </div>
+        </div>
+      </section>
+
+      <section className="h-fit bg-green-950">
+        <div className="flex p-12 place-self-center">
+          <div className="p-12 w-full border border-slate-500 rounded-md">
+            <div className="flex flex-row justify-evenly p-12">
+              <div className="flex flex-col">
+                <h1 className="text-4xl font-bold">36,789+</h1>
+                <h5 className="text-sm mt-6">Talented Freelancer</h5>
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-4xl font-bold">36,789+</h1>
+                <h5 className="text-sm mt-6">Talented Freelancer</h5>
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-4xl font-bold">36,789+</h1>
+                <h5 className="text-sm mt-6">Talented Freelancer</h5>
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-4xl font-bold">36,789+</h1>
+                <h5 className="text-sm mt-6">Talented Freelancer</h5>
+              </div>
+            </div>
+
+          </div>
 
         </div>
       </section>
+
+
 
 
 
