@@ -3,6 +3,7 @@ import { PiDotsSixVerticalLight, PiCircleFill } from "react-icons/pi";
 import SolanaRockstarCard from "./components/home/solana_rockstar_card";
 import FeaturedProfileCard from "./components/home/featured_profile_card";
 import WhyChooseUsCard from "./components/home/why_choose_us_card";
+import FeaturedJobCard from "./components/home/featured_jobs_card";
 
 const cards = [
   {
@@ -122,7 +123,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="h-96 bg-green-950 p-12">
+      <section className="h-1/2 bg-green-950 p-12">
         <div className="flex justify-between">
           <div className="text-xl font-medium">Featured profile this week</div>
           <div className="text-sm">View more</div>
@@ -131,7 +132,7 @@ export default function Home() {
           {
             featured_profile_cards.map((card) => (
               <div key={card.id} className="p-4 mt-16 w-full">
-                <FeaturedProfileCard cardId={card.id} userProfession={card.userProfession} userPrice={card.userPrice} userName={"eee"} userImage={"eee"} />
+                <FeaturedProfileCard cardId={card.id} userProfession={card.userProfession} userPrice={card.userPrice} userName={"David"} userImage={"https://img.freepik.com/free-photo/casual-young-african-man-smiling-isolated-white_93675-128895.jpg?w=740&t=st=1711255753~exp=1711256353~hmac=517869ef737dd30f0d791777a7b87cb64295f3ff7e63f451481dfb38b0aeb5a2"} />
               </div>
             ))
           }
@@ -141,9 +142,9 @@ export default function Home() {
       <section className="h-screen text-green-950  bg-white">
 
         <div className="flex flex-col place-items-center">
-          <div className="flex flex-col max-w-md text-center">
+          <div className="flex flex-col max-w-md text-center my-12">
             <div className="text-3xl font-semibold">Why Choose Us</div>
-            <div className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+            <div className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
           </div>
           <div className="grid grid-cols-3 gap-4">
             <div>
@@ -169,6 +170,23 @@ export default function Home() {
 
         </div>
 
+      </section>
+
+      <section className="h-screen text-green-950  bg-white">
+        <div className="flex flex-col place-items-center">
+          <div className="flex flex-col max-w-md text-center my-12">
+            <div className="text-3xl font-semibold">Featured Jobs</div>
+            <div className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+
+            <div>
+              <FeaturedJobCard />
+            </div>
+          </div>
+
+
+        </div>
       </section>
 
 
