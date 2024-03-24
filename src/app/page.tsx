@@ -109,7 +109,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-12">
         <div className="flex flex-col">
           <div className="text-3xl font-semibold text-green-950 text-center">Everything You Need to Become a Solana Rockstar</div>
           <div className="flex flex-row space-x-4"> {/* Flex container for cards with padding */}
@@ -138,15 +138,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-96 text-green-950  bg-white">
+      <section className="h-screen text-green-950  bg-white">
 
         <div className="flex flex-col place-items-center">
           <div className="flex flex-col max-w-md text-center">
             <div className="text-3xl font-semibold">Why Choose Us</div>
             <div className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
           </div>
-          <div className="">
-            <WhyChooseUsCard />
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <WhyChooseUsCard />
+            </div>
+            <div>
+              <WhyChooseUsCard />
+            </div>
+            <div>
+              <WhyChooseUsCard />
+            </div>
+            <div>
+              <WhyChooseUsCard />
+            </div>
+            <div>
+              <WhyChooseUsCard />
+            </div>
+            <div>
+              <WhyChooseUsCard />
+            </div>
           </div>
 
 
