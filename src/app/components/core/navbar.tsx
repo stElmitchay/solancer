@@ -10,7 +10,7 @@ const navBarItems = [
     },
     {
         text: 'Build a Product',
-        path: '/'
+        path: '/build'
     },
     {
         text: 'Learn',
@@ -18,22 +18,19 @@ const navBarItems = [
     },
     {
         text: 'Become a hunter',
-        path: '/'
+        path: '/hunt'
     }
 ]
 
 const NavBar = () => {
     return (
-        <>
-            <nav className="flex flex-row max-w-full pt-6 bg-white">
+        <nav className="flex flex-row max-w-full pt-6 bg-white">
                 <div className="w-full">
                     <ul className="flex justify-around items-center">
                         <li><Logo /></li>
                         {
-                            navBarItems.map((navBarItem, i) => (
-                                <>
-                                    <NavMenuItem key={i} {...navBarItem} />
-                                </>
+                            navBarItems.map((navBarItem) => (
+                                <NavMenuItem key={navBarItem.path} {...navBarItem} />
                             ))
                         }
                         <li>
@@ -52,8 +49,6 @@ const NavBar = () => {
                     </ul>
                 </div>
             </nav>
-
-        </>
     )
 }
 

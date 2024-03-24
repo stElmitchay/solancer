@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { PiDotsSixVerticalLight, PiCircleFill } from "react-icons/pi";
-import NavBar from "./components/core/navbar";
 import FeaturedProfileSection from "./components/home/sections/featured_profile_section";
 import WhyChooseUsSection from "./components/home/sections/why_choose_us_section";
 import FeaturedJobsSection from "./components/home/sections/featured_jobs_section";
@@ -8,27 +7,6 @@ import MetricsSection from "./components/home/sections/metrics_section";
 import LatestNewsSection from "./components/home/sections/latest_news_section";
 import Footer from "./components/core/footer";
 import SolanaRockStarSection from "./components/home/sections/solana_rockstar_section";
-
-const cards = [
-  {
-    id: "1",
-    header: "From Rookie to Expert",
-    subHeader: "Dive deep into the world of Solana development with our comprehensive suite of resources. Whether you’re a complete beginner or a seasoned developer looking to expand your skill set, we’ve got you covered. Learn at your own pace, collaborate with fellow builders, and put your newfound knowledge to the test."
-  },
-  {
-    id: "2",
-    header: "Land Freelance Gigs and Put Your Skills to Work",
-    subHeader: "Showcase your expertise to a network of potential clients and secure freelance gigs that fit your skill set and schedule. The Solana ecosystem is booming, and there’s a growing need for talented developers."
-  },
-  {
-    id: "3",
-    header: "Connect, Collaborate, And Build the Future of Solana",
-    subHeader: "Connect with a vibrant community of Solana developers, exchange ideas, and work together to bring your innovative projects to life. The Solana ecosystem thrives on collaboration, and our platform provides the perfect space to join forces and make your mark on the blockchain."
-  },
-
-]
-
-
 
 
 export default function Home() {

@@ -2,15 +2,16 @@ import React from 'react'
 
 type Button = {
     color: string,
-    text: string
+    text: string,
+    rounded_size: string
 }
 
 
 const PrimaryButton = ({
-    color, text
+    color, text, rounded_size
 } : Button) => {
   return (
-    <button className={`bg-${color} rounded-full px-8 py-3`}><h5 className='text-white'>{text}</h5></button>
+    <button className={`bg-${color} rounded-${rounded_size} px-8 py-3`}><h5 className='text-white'>{text}</h5></button>
   )
 }
 

@@ -44,31 +44,29 @@ const featured_jobs_card = [
 
 const FeaturedJobsSection = () => {
     return (
-        <>
-            <section className="h-screen text-green-950  bg-white">
-                <div className="flex flex-col place-items-center">
-                    <div className="flex flex-col max-w-md text-center my-12">
-                        <div className="text-3xl font-semibold">Featured Jobs</div>
-                        <div className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
-                    </div>
-
-
-                    <div className="flex flex-row ps-8 pr-8">
-                        {
-                            featured_jobs_card.map((job) => (
-                                <div key={job.id} className="px-4">
-                                    <FeaturedJobCard key={job.id} profession={job.profession} company={job.company} minSalary={job.minSalary} maxSalary={job.maxSalary} location={job.location} />
-                                </div>
-                            ))
-                        }
-                    </div>
-
-                    <div className="mt-12">
-                        <PrimaryButton color={'green-950'} text="View more" />
-                    </div>
+        <section className="h-screen text-green-950  bg-white">
+            <div className="flex flex-col place-items-center">
+                <div className="flex flex-col max-w-md text-center my-12">
+                    <div className="text-3xl font-semibold">Featured Jobs</div>
+                    <div className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
                 </div>
-            </section>
-        </>
+
+
+                <div className="flex flex-row ps-8 pr-8">
+                    {
+                        featured_jobs_card.map((job) => (
+                            <div key={job.id} className="px-4">
+                                <FeaturedJobCard key={job.id} profession={job.profession} company={job.company} minSalary={job.minSalary} maxSalary={job.maxSalary} location={job.location} />
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div className="mt-12">
+                    <PrimaryButton color={'green-950'} text="View more" rounded_size={'full'} />
+                </div>
+            </div>
+        </section>
     )
 }
 
