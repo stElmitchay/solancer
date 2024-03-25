@@ -1,12 +1,11 @@
-import React from 'react'
-import CoursesCard from '../components/learn/courses_card'
-import { GoFilter } from 'react-icons/go'
-import CoursesLearnCard from '../components/learn/courses_learn_card'
-import PrimaryButton from '../components/core/button'
-import EventsCard from '../components/learn/events_card'
-import Footer from '../components/core/footer'
-import { Cardo } from 'next/font/google'
-import { PiCubeLight, PiDeviceMobile, PiGlobeDuotone, PiMedal } from 'react-icons/pi'
+import React from 'react';
+import CoursesCard from '../components/learn/courses_card';
+import { GoFilter } from 'react-icons/go';
+import CoursesLearnCard from '../components/learn/courses_learn_card';
+import PrimaryButton from '../components/core/button';
+import EventsCard from '../components/learn/events_card';
+import Footer from '../components/core/footer';
+import { PiCubeLight, PiDeviceMobile, PiGlobeDuotone, PiMedal, PiCheckCircle, PiHeartDuotone } from 'react-icons/pi'
 
 
 const courses = [
@@ -40,9 +39,76 @@ const courses = [
 const learningCards = [
     {
         id: "1",
+        category: "Mobile",
+        title: "Full Stack Web Development MERN Stack"
 
-    }
+    },
+    {
+        id: "2",
+        category: "Mobile",
+        title: "Full Stack Web Development MERN Stack"
+
+    },
+    {
+        id: "3",
+        category: "Mobile",
+        title: "Full Stack Web Development MERN Stack"
+
+    },
+    {
+        id: "4",
+        category: "Mobile",
+        title: "Full Stack Web Development MERN Stack"
+
+    },
+    {
+        id: "5",
+        category: "Mobile",
+        title: "Full Stack Web Development MERN Stack"
+
+    },
+    {
+        id: "6",
+        category: "Mobile",
+        title: "Full Stack Web Development MERN Stack"
+
+    },
 ]
+
+const events = [
+    {
+        id: "1",
+        day: "3",
+        month: "Nov",
+        eventCategory: "Mobile App",
+        eventTitle: "Global Android Programmer Meetup 2020",
+        eventDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        icon: <PiCheckCircle className='text-green-600' />
+
+    },
+    {
+        id: "2",
+        day: "14",
+        month: "Nov",
+        eventCategory: "ART EXIBITHION",
+        eventTitle: "Paris Designer Meetup with Ziro Partner",
+        eventDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        icon: <PiHeartDuotone className='text-green-600' />
+
+    },
+    {
+        id: "3",
+        day: "10",
+        month: "Feb",
+        eventCategory: "ACCOUNTING",
+        eventTitle: "Bussiness Plan in Pandemic with Famous Native Speaker",
+        eventDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        icon: <PiHeartDuotone className='text-green-600' />
+
+
+    },
+]
+
 
 
 
@@ -73,32 +139,33 @@ export default function Learn() {
                     <h1 className="text-3xl text-green-950 font-semibold">Blogs</h1>
                     <h5 className="text-sm text-slate-400">Learn the latest knowledge from experties mentors</h5>
                 </div>
-                <div className='flex justify-between mt-4'>
-                    <input type="search" id="default-search" className="block h-8 ps-10 text-sm border border-slate-300 rounded-sm" placeholder="Search Here" required />
+                <div className='flex justify-between mt-4 w-full'>
+                    <input type="search" id="default-search" className="block h-8 ps-10 text-sm border border-slate-300 rounded-md min-w-96 max-w-96" placeholder="Search Here" required />
                     <button className='text-gray-900 bg-white p-2 rounded-sm flex items-center border border-slate-300'>
                         <GoFilter />
                         <h5 className='text-sm ps-2'>Filters</h5>
                     </button>
                 </div>
-                <div className="grid grid-cols-3 gap-x-12">
-                    <CoursesLearnCard  />
-                    <CoursesLearnCard />
-                    <CoursesLearnCard />
-                    <CoursesLearnCard />
-                    <CoursesLearnCard />
-                    <CoursesLearnCard />
+                <div className="grid grid-cols-4 mt-8 gap-8">
+                    {
+                        learningCards.map((card) => (
+                            <div key={card.id}>
+                                <CoursesLearnCard key={card.id} {...card} />
+                            </div>
+                        ))
+                    }
                 </div>
 
 
                 <div className="flex justify-center mt-24">
-                    <PrimaryButton text='See More Courses' color='blue-200' rounded_size='md' />
+                    <PrimaryButton text='See More Courses' buttonColor='blue-200' rounded_size='md' hover_text_color='green-400' />
                 </div>
 
 
 
             </div>
 
-            <section className='bg-green-950 h-screen'>
+            <section className='bg-green-950 h-fit'>
 
                 <div className="flex flex-col p-24">
 
@@ -114,11 +181,19 @@ export default function Learn() {
                         </div>
                     </div>
 
+                    <div className="grid grid-cols-3 mt-8 gap-8">
+                        {
+                            events.map((program) => (
+                                <div key={program.id}>
+                                    <EventsCard key={program.id} {...program} />
+                                </div>
+                            ))
+                        }
+                    </div>
 
-                    <EventsCard />
 
-                    <div className="text-center">
-                        <h5 className='text-slate-100'>View more</h5>
+                    <div className="text-center mt-12">
+                        <button className='text-slate-100'>View more</button>
                     </div>
 
 

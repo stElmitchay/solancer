@@ -3,10 +3,11 @@ import PrimaryButton from '../core/button';
 import StarRating from '../home/star_rating';
 
 type LearningCard = {
-    category: string
+    category: string,
+    title: string
 }
 
-const CoursesLearnCard = ({ category }: LearningCard) => {
+const CoursesLearnCard = ({ category, title }: LearningCard) => {
     return (
         <div>
             <div className="bg-white rounded-md h-96 max-w-sm p-4">
@@ -20,7 +21,7 @@ const CoursesLearnCard = ({ category }: LearningCard) => {
                             <StarRating />
                         </div>
 
-                        <h1 className='text-green-950 text-xl truncate text-nowrap font-semibold mt-4'>Full-Stack Laravel Web Developement</h1>
+                        <h1 className='text-green-950 text-xl truncate text-nowrap font-semibold mt-4'>{title}</h1>
 
 
                     </div>
