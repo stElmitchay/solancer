@@ -3,16 +3,15 @@ import React from 'react'
 type Button = {
   buttonColor: string,
   text: string,
-  rounded_size: string,
-  hover_text_color?: string
+  rounded_size: string
 }
 
 
 const PrimaryButton = ({
-  buttonColor, text, rounded_size, hover_text_color
+  buttonColor, text, rounded_size
 }: Button) => {
   return (
-    <button className={`bg-${buttonColor} rounded-${rounded_size}  hover:bg-${hover_text_color} px-8 py-3`}><h5 className={`text-slate-200`}>{text}</h5></button>
+    <button className={`bg-${buttonColor} rounded-${rounded_size} px-8 py-3 hover:text-slate-500 text-green-950 font-semibold`}><h5>{text}</h5></button>
   )
 }
 

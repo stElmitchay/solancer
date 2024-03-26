@@ -27,7 +27,7 @@ const CoursesLearnCard = ({ category, title }: LearningCard) => {
                     </div>
 
                     <div>
-                        <PrimaryButton text='Start Learning' color={'green-950'} rounded_size='lg' />
+                        <PrimaryButton text='Start Learning' buttonColor={'green-950'} rounded_size='lg' />
                     </div>
 
                 </div>

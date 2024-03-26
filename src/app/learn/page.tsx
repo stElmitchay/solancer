@@ -158,7 +158,7 @@ export default function Learn() {
 
 
                 <div className="flex justify-center mt-24">
-                    <PrimaryButton text='See More Courses' buttonColor='blue-200' rounded_size='md' hover_text_color='green-400' />
+                    <PrimaryButton text='See More Courses' buttonColor='blue-200' rounded_size='md' />
                 </div>
 
 
@@ -192,9 +192,9 @@ export default function Learn() {
                     </div>
 
 
-                    <div className="text-center mt-12">
-                        <button className='text-slate-100'>View more</button>
-                    </div>
+
+                    <button className='text-center mt-12 hover:text-slate-500 text-slate-200'>View more</button>
+
 
 
 

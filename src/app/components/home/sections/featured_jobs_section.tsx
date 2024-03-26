@@ -63,7 +63,7 @@ const FeaturedJobsSection = () => {
                 </div>
 
                 <div className="mt-12">
-                    <PrimaryButton color={'green-950'} text="View more" rounded_size={'full'} />
+                    <PrimaryButton buttonColor={'green-950'} text="View more" rounded_size={'full'} />
                 </div>
             </div>
         </section>
