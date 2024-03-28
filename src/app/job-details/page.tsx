@@ -1,13 +1,16 @@
 import React from 'react'
 import { FaLongArrowAltLeft } from 'react-icons/fa'
 import CompanyDetailsCard from '../components/job-details/company_details_card'
+import CompanyDetailsHeader from '../components/job-details/company-details-header'
+import CompanyJobApplicationForm from '../components/job-details/company-job-application-form'
+import Footer from '../components/core/footer'
 
 export default function Job_Details() {
 
     return (
-        <main className='min-h-screen bg-[#F6F8FD]'>
+        <main className='h-fit bg-[#F6F8FD]'>
 
-            <div className="bg-green-950 h-96 px-12">
+            <div className="bg-green-950 h-60 px-12">
                 <div className="flex">
                     <button className="bg-white rounded-full p-4">
                         <FaLongArrowAltLeft className='text-green-950' />
@@ -18,21 +21,25 @@ export default function Job_Details() {
                     </div>
                 </div>
 
-
-                <div className="absolute">
-                    <div className="flex gap-x-12">
+                <section className='absolute h-screen'>
+                    <div className="flex">
                         <CompanyDetailsCard />
-                        <CompanyDetailsCard />
-
+                        <div className="flex flex-col gap-y-6">
+                            <CompanyDetailsHeader />
+                            <CompanyJobApplicationForm />
+                        </div>
                     </div>
-                </div>
-
-
-
-
+                </section>
             </div>
 
+            <section>
+                dd
+            </section>
 
+            <div className="relative">
+                <Footer />
+
+            </div>
 
         </main>
     )
