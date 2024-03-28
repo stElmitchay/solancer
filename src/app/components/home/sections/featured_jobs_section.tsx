@@ -44,7 +44,7 @@ const featured_jobs_card = [
 
 const FeaturedJobsSection = () => {
     return (
-        <section className="h-screen text-green-950  bg-white">
+        <section className="h-screen text-green-950 bg-white mt-24 mb-4">
             <div className="flex flex-col place-items-center">
                 <div className="flex flex-col max-w-md text-center my-12">
                     <div className="text-3xl font-semibold">Featured Jobs</div>

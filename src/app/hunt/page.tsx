@@ -6,6 +6,8 @@ import PeoplesCard from '../components/hunt/peoples_card'
 import Footer from '../components/core/footer'
 import CardsCarousel from '../components/core/card_carousel'
 
+
+
 export default function Hunt() {
     return (
         <main className='min-h-screen bg-[#F6F8FD]'>

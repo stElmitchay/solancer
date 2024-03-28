@@ -4,7 +4,7 @@ import { PiMapPin } from 'react-icons/pi';
 const WhyChooseUsCard = () => {
     return (
         <div>
-            <div className='max-w-sm h-48 bg-[#BBEDED] p-8 pb-52 rounded-2xl'>
+            <div className='max-w-xs h-48 bg-[#8236FF] p-8 pb-52 rounded-2xl'>
                 <div className="bg-[#FF754C] size-12 p-2 rounded-xl mb-4">
                     <div className='size-4  bg-white rounded-full'>
                         <PiMapPin className='text-[#FF754C]' />
