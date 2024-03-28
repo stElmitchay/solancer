@@ -3,7 +3,6 @@ import React from 'react'
 import StarRating from './star_rating';
 
 type User = {
-    cardId: string,
     userName: string,
     userProfession: string,
     userPrice: string
@@ -11,7 +10,6 @@ type User = {
 }
 
 const FeaturedProfileCard = ({
-    cardId,
     userName,
     userProfession,
     userPrice,
@@ -19,7 +17,7 @@ const FeaturedProfileCard = ({
 }: User) => {
     return (
         <div>
-            <div className={` max-w-sm bg-white rounded-2xl p-8 ${cardId == '1' && 'clip'} `}>
+            <div className='max-w-sm bg-white rounded-2xl p-8'>
                 <div className='flex flex-col'>
                     <div className='flex items-center space-x-4'>
                         <img
@@ -32,8 +30,10 @@ const FeaturedProfileCard = ({
                         </div>
                     </div>
                     <div className='mt-4 flex justify-between items-center'>
+
                         <StarRating />
-                        <div className='bg-[#FE8D4D] rounded-full px-6 py-2'>${userPrice}/hr</div>
+
+                        <div className='bg-[#FE8D4D] rounded-full px-4 py-2'>${userPrice}/hr</div>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,3 @@ const FeaturedProfileCard = ({
 }
 
 export default FeaturedProfileCard;
-
-function circle() {
-    throw new Error('Function not implemented.');
-}

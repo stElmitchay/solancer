@@ -26,9 +26,9 @@ const SolanaRockStarSection = () => {
         <>      <div className="h-fit flex justify-center mb-12">
             <div className="flex flex-col">
                 <div className="text-3xl font-semibold text-green-950 text-center">Everything You Need to Become a Solana Rockstar</div>
-                <div className="flex flex-row space-x-4"> {/* Flex container for cards with padding */}
+                <div className="flex gap-x-6"> {/* Flex container for cards with padding */}
                     {cards.map((card) => (
-                        <div key={card.id} className="p-4 mt-16"> {/* Add padding to each card */}
+                        <div key={card.id} className="mt-16"> {/* Add padding to each card */}
                             <SolanaRockstarCard header={card.header} subHeader={card.subHeader} />
                         </div>
                     ))}

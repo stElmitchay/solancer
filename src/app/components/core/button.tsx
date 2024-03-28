@@ -11,7 +11,7 @@ const PrimaryButton = ({
   buttonColor, text, rounded_size
 }: Button) => {
   return (
-    <button className={`bg-${buttonColor} rounded-${rounded_size} px-8 py-3 hover:text-slate-500 text-green-950 font-semibold`}><h5>{text}</h5></button>
+    <button className={`bg-${buttonColor} rounded-${rounded_size} px-8 py-3 hover:text-slate-200 text-slate-500 font-semibold`}><h5>{text}</h5></button>
   )
 }
 
