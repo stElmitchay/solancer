@@ -1,6 +1,7 @@
 import React from 'react'
 import FeaturedJobCard from '../featured_jobs_card';
 import PrimaryButton from '../../core/button';
+import Link from 'next/link';
 
 
 
@@ -43,6 +44,7 @@ const featured_jobs_card = [
 
 
 const FeaturedJobsSection = () => {
+
     return (
         <section className="h-screen text-green-950 bg-white mt-24 mb-4">
             <div className="flex flex-col place-items-center">
@@ -63,7 +65,8 @@ const FeaturedJobsSection = () => {
                 </div>
 
                 <div className="mt-12">
-                    <PrimaryButton buttonColor={'green-950'} text="View more" rounded_size={'full'} />
+                    <Link href={'/job-details'}> <PrimaryButton buttonColor={'green-950'} text="View more" rounded_size={'full'} /></Link>
+
                 </div>
             </div>
         </section>

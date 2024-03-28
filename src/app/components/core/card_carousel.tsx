@@ -87,6 +87,7 @@ const CardsCarousel = () => {
                 cardInfo.map((cardInfo) => (
                     <SwiperSlide key={cardInfo.id}>
                         <FeaturedProfileCard {...cardInfo} />
+                        {/* insert children here, map thru array object in component where it's used */}
                     </SwiperSlide>
                 ))
             }
