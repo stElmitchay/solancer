@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/core/navbar";
+import { useWallet } from "@solana/wallet-adapter-react";
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,19 +13,29 @@ export const metadata: Metadata = {
 };
 
 
+const WalletConnectionProvider = dynamic(
+  () => import("./context/WalletConnectionProvider"),
+  {
+    ssr: false,
+  }
+);
+
+
+
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
+    // <WalletConnectionProvider>
     <html lang="en">
       <body className={`${inter.className}`}>
-          <NavBar />
-          {children}
+        <NavBar />
+        {children}
       </body>
+
     </html>
   );
 }

@@ -7,10 +7,10 @@ const Footer = () => {
         <>
             <section className="h-fit bg-[#1F2131]">
                 <div className="p-12">
-                    <div className="flex flex-row items-center justify-between">
+                    {/* <div className="flex flex-row items-center justify-between">
                         <h1 className="max-w-md text-3xl text-[#72CAC4] font-semibold leading-relaxed">Don’t miss our weekly updates about freelancer career</h1>
                         <input type="search" id="default-search" className="block h-8 ps-10 text-sm border border-slate-300 rounded-full" placeholder="Search Here" required />
-                    </div>
+                    </div> */}
 
                     <div className="flex flex-row items-center mt-32">
 
