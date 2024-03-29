@@ -11,7 +11,7 @@ const MetricsSection = () => {
                             <h1 className="text-4xl font-bold">36,789+</h1>
                             <h5 className="text-sm mt-6">Talented Freelancer</h5>
                         </div>
-                        <div className="flex flex-col">
+                        {/* <div className="flex flex-col">
                             <h1 className="text-4xl font-bold">36,789+</h1>
                             <h5 className="text-sm mt-6">Talented Freelancer</h5>
                         </div>
@@ -22,7 +22,7 @@ const MetricsSection = () => {
                         <div className="flex flex-col">
                             <h1 className="text-4xl font-bold">36,789+</h1>
                             <h5 className="text-sm mt-6">Talented Freelancer</h5>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>

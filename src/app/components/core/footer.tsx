@@ -26,7 +26,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-4 gap-4 px-32">
+                        {/* <div className="grid grid-cols-4 gap-4 px-32">
                             <div className="flex flex-col">
                                 <h1 className="font-semibold">Solancer</h1>
                                 <ul>
@@ -72,7 +72,7 @@ const Footer = () => {
 
 
 
-                        </div>
+                        </div> */}
 
 
                     </div>

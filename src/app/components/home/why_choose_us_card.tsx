@@ -1,22 +1,33 @@
 import React from 'react'
-import { PiMapPin } from 'react-icons/pi';
 
-const WhyChooseUsCard = () => {
+
+type WhyChooseUsCard = {
+    header: string,
+    subHeader: string,
+    icon: React.ReactNode,
+    iconBgColor: string
+}
+
+
+
+const WhyChooseUsCard = ({ header, subHeader, icon, iconBgColor }: WhyChooseUsCard) => {
     return (
         <div>
             <div className='max-w-xs h-48 bg-[#8236FF] p-8 pb-52 rounded-2xl'>
-                <div className="bg-[#FF754C] size-12 p-2 rounded-xl mb-4">
-                    <div className='size-4  bg-white rounded-full'>
-                        <PiMapPin className='text-[#FF754C]' />
+                <div className="flex flex-col text-slate-50">
+                    <div className={`bg-[${iconBgColor}] h-fit w-fit p-2 place-content-center rounded-xl`}>
+                        {icon}
+                    </div>
+                    <div className='mt-4'>
+                        <h1 className='text-2xl font-semibold '>{header}</h1>
+                        <h5 className='text-sm mt-2'>{subHeader}</h5>
                     </div>
                 </div>
 
-                <h1 className='text-2xl font-semibold'>Transparent</h1>
-                <h5 className='text-sm mt-2'>We maintain a full transparency policy making sure everything is seen.</h5>
-
             </div>
-        </div>
+        </div >
     )
 }
+
 
 export default WhyChooseUsCard; 

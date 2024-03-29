@@ -38,7 +38,11 @@ export default function Job_Details() {
                 </div>
 
 
-                <div className="flex text-slate-800 py-24">
+                <div className="flex text-slate-800 py-24 gap-12 justify-center">
+                    <h1 className='text-2xl'>KJNKJNSJKN</h1>
+                    <h1 className='text-2xl'>KJNKJNSJKN</h1>
+                    <h1 className='text-2xl'>KJNKJNSJKN</h1>
+                    <h1 className='text-2xl'>KJNKJNSJKN</h1>
                     <h1 className='text-2xl'>KJNKJNSJKN</h1>
                 </div>
 

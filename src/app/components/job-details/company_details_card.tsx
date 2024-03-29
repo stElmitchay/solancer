@@ -65,7 +65,7 @@ const CompanyDetailsCard = () => {
 
                 <hr />
 
-                <div className="flex flex-col">
+                <div className="flex flex-col mt-6">
                     <div className="flex flex-col text-slate-800">
                         <h1 className="text-sm font-semibold">About Company</h1>
                         <div className="flex flex-col">

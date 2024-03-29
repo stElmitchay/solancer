@@ -13,9 +13,9 @@ export default function Home() {
 
   return (
 
-    <main className="min-h-screen bg-white">
+    <main className="min-h-fit bg-[#F6F8FD]">
       
-      <div className="h-screen flex flex-row justify-around text-green-950">
+      <div className="h-fit md:h-screen flex flex-row justify-around text-green-950">
         <div className="flex flex-col mt-20">
           <div className="max-w-lg text-5xl font-bold">
             Level Up Your Solana Dev Skills: From Beginner to Builder
@@ -30,7 +30,7 @@ export default function Home() {
 
         <div className="flex items-center">
           <PiDotsSixVerticalLight className="scale-125" />
-          <PiCircleFill className="w-[575px] h-[575px]" />
+          <PiCircleFill className="md:w-[575px] h-[575px]" />
         </div>
       </div>
 

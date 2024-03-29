@@ -46,7 +46,7 @@ const featured_jobs_card = [
 const FeaturedJobsSection = () => {
 
     return (
-        <section className="h-screen text-green-950 bg-white mt-24 mb-4">
+        <section className="h-fit text-green-950 bg-white">
             <div className="flex flex-col place-items-center">
                 <div className="flex flex-col max-w-md text-center my-12">
                     <div className="text-3xl font-semibold">Featured Jobs</div>
@@ -54,17 +54,17 @@ const FeaturedJobsSection = () => {
                 </div>
 
 
-                <div className="flex flex-row ps-8 pr-8">
+                <div className="md:flex flex-row gap-12">
                     {
                         featured_jobs_card.map((job) => (
-                            <div key={job.id} className="px-4">
+                            <div key={job.id} className=''>
                                 <FeaturedJobCard key={job.id} profession={job.profession} company={job.company} minSalary={job.minSalary} maxSalary={job.maxSalary} location={job.location} />
                             </div>
                         ))
                     }
                 </div>
 
-                <div className="mt-12">
+                <div className="mt-12 pb-12">
                     <Link href={'/job-details'}> <PrimaryButton buttonColor={'green-950'} text="View more" rounded_size={'full'} /></Link>
 
                 </div>
