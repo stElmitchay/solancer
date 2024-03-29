@@ -5,7 +5,7 @@ import { PiMapPinLineBold } from 'react-icons/pi'
 const CompanyDetailsHeader = () => {
     return (
         <div>
-            <div className="bg-white h-fit p-8 rounded-xl">
+            <div className="bg-white h-fit py-8 rounded-xl">
                 <div className="flex justify-around">
                     <div className="flex flex-col">
                         <h1 className="text-slate-800 font-semibold text-sm tracking-wide">Lead UI/UX Designer</h1>
