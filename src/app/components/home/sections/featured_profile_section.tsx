@@ -30,10 +30,10 @@ const FeaturedProfileSection = () => {
     return (
         <section className="h-fit bg-green-950 p-12">
             <div className="flex justify-between">
-                <div className="text-xl font-medium">{`See Who's Building the Future of Solana`}</div>
-                <button className="text-sm">View more</button>
+                <div className="lg:text-xl font-medium"><h1>{`See Who's Building the Future of Solana`}</h1></div>
+                <button className="hidden text-sm md:block">View more</button>
             </div>
-            <div className="lg:flex flex-row gap-4 mt-16 md:grid grid-cols-2">
+            <div className="pt-6">
                 <CardsCarousel />
             </div>
         </section>

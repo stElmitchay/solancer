@@ -54,14 +54,16 @@ const curatedDevelopementCourses = [
 
 const WhyChooseUsSection = () => {
     return (
-        <section className="h-fit text-green-950 bg-white pb-24">
+        <section className="h-fit text-green-950 bg-white pt-10 pb-12">
 
             <div className="flex flex-col place-items-center">
                 <div className="flex flex-col items-center py-12">
-                    <div className="md:text-3xl font-semibold md:text-nowrap">Explore Our Curated Solana Development Courses</div>
+                    <div className="">
+                        <h1 className="text-xl md:text-3xl font-semibold text-center">Explore Our Curated Solana Development Courses</h1>
+                    </div>
                     <div className="text-sm mt-4 max-w-md text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
                 </div>
-                <div className="md:grid grid-cols-3 gap-8">
+                <div className="flex flex-col gap-8 md:grid grid-cols-3">
                     {curatedDevelopementCourses.map((card) => (
                         <div key={card.id}>
                             <WhyChooseUsCard header={card.header} subHeader={card.subHeader} icon={card.icon} iconBgColor={card.iconBgColor} />

@@ -15,21 +15,21 @@ export default function Home() {
 
     <main className="min-h-fit bg-[#F6F8FD]">
       
-      <div className="h-fit md:h-screen flex flex-row justify-around text-green-950">
+      <div className="h-fit pb-12 md:h-screen flex flex-row justify-around text-green-950">
         <div className="flex flex-col mt-20">
-          <div className="max-w-lg text-5xl font-bold">
-            Level Up Your Solana Dev Skills: From Beginner to Builder
+          <div className="max-w-lg px-1 md:p-0">
+            <h1 className="text-3xl text-center md:text-5xl font-bold text-wrap lg:text-start">Level Up Your Solana Dev Skills: From Beginner to Builder</h1>
           </div>
-          <div className="max-w-sm text-sm mt-8">
+          <div className="px-3 max-w-sm text-sm mt-8">
             Access curated learning materials, collaborate with peers and land freelance gigs.
           </div>
-          <div className="max-w-sm flex justify-end mt-8">
+          <div className="text-center md:flex mt-8 max-w-sm lg:justify-end">
             <button className="h-12 text-white font-semibold bg-green-950 px-10 py-2 rounded-full">Lets hunt</button>
           </div>
         </div>
 
-        <div className="flex items-center">
-          <PiDotsSixVerticalLight className="scale-125" />
+        <div className="hidden md:flex items-center">
+          <PiDotsSixVerticalLight />
           <PiCircleFill className="md:w-[575px] h-[575px]" />
         </div>
       </div>

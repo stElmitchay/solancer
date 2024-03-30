@@ -27,10 +27,10 @@ const SolanaRockStarSection = () => {
     <>
       <div className="h-fit flex justify-center pb-12">
         <div className="flex flex-col">
-          <div className="md:text-3xl font-semibold text-green-950 text-center">
-            Everything You Need to Become a Solana Rockstar
+          <div className=" text-green-950">
+            <h1 className="text-xl md:text-3xl font-semibold text-center">Everything You Need to Become a Solana Rockstar</h1>
           </div>
-          <div className="flex flex-col md:flex-row gap-12 pt-24">
+          <div className="flex flex-col items-center md:flex-row gap-12 pt-24">
             {cards.map((card) => (
               <div key={card.id}>
                 <SolanaRockstarCard

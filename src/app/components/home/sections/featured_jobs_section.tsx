@@ -54,10 +54,10 @@ const FeaturedJobsSection = () => {
                 </div>
 
 
-                <div className="md:flex flex-row gap-12">
+                <div className="gap-4 lg:flex flex-row">
                     {
                         featured_jobs_card.map((job) => (
-                            <div key={job.id} className=''>
+                            <div key={job.id} className='p-4 lg:p-0'>
                                 <FeaturedJobCard key={job.id} profession={job.profession} company={job.company} minSalary={job.minSalary} maxSalary={job.maxSalary} location={job.location} />
                             </div>
                         ))

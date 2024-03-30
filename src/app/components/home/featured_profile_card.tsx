@@ -17,7 +17,7 @@ const FeaturedProfileCard = ({
 }: User) => {
     return (
         <div>
-            <div className='max-w-sm bg-white rounded-2xl p-8'>
+            <div className='hidden md:block flex-flex-row max-w-sm bg-white rounded-2xl p-8'>
                 <div className='flex flex-col'>
                     <div className='flex items-center space-x-4'>
                         <img

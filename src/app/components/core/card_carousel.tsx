@@ -75,24 +75,28 @@ const cardInfo = [
 ]
 
 const CardsCarousel = () => {
-    return (
-        <Swiper
-            spaceBetween={30}
-            slidesPerView={4}
-            // onSlideChange={() => { }}
-            // onSwiper={() => { }}
-            navigation={true} modules={[Navigation]}
-        >
-            {
-                cardInfo.map((cardInfo) => (
-                    <SwiperSlide key={cardInfo.id}>
-                        <FeaturedProfileCard {...cardInfo} />
-                        {/* insert children here, map thru array object in component where it's used */}
-                    </SwiperSlide>
-                ))
-            }
 
-        </Swiper >
+    const slidesPerView = 4
+    return (
+        <div className="lg:flex flex-row">
+            <Swiper
+                spaceBetween={30}
+                slidesPerView={4}
+                // onSlideChange={() => { }}
+                // onSwiper={() => { }}
+                navigation={true} 
+                modules={[Navigation]}
+            >
+                {
+                    cardInfo.map((cardInfo) => (
+                        <SwiperSlide key={cardInfo.id}>
+                            <FeaturedProfileCard {...cardInfo} />
+                            {/* insert children here, map thru array object in component where it's used */}
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper >
+        </div>
     )
 }
 
